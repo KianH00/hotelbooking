@@ -2,36 +2,56 @@ const wrapper = document.querySelector('#wrapper');
 const loginLink = document.querySelector('.login-link');
 const registerLink = document.querySelector('.register-link');
 
-
-registerLink.addEventListener('click', () => { //register link
+if (registerLink && wrapper) {
+  registerLink.addEventListener('click', (e) => {
+    e.preventDefault();
     wrapper.classList.add('active');
-});
+  });
+}
 
-loginLink.addEventListener('click', () => { //login link 
+if (loginLink && wrapper) {
+  loginLink.addEventListener('click', (e) => {
+    e.preventDefault();
     wrapper.classList.remove('active');
-});
-
-
-
-//This java script code is for the Date and time in the booking form//
-var currentDateTime = new Date();
-var year = currentDateTime.getFullYear();
-var month = (currentDateTime.getMonth() + 1);
-var date = (currentDateTime.getDate() + 1);
-
-if(date < 10) {
-  date = '0' + date;
-}
-if(month < 10) {
-  month = '0' + month;
+  });
 }
 
-var dateTomorrow = year + "-" + month + "-" + date;
-var checkinElem = document.querySelector("#checkin-date");
-var checkoutElem = document.querySelector("#checkout-date");
+// Date logic
+const checkinElem = document.querySelector("#checkin-date");
+const checkoutElem = document.querySelector("#checkout-date");
 
-checkinElem.setAttribute("min", dateTomorrow);
+if (checkinElem && checkoutElem) {
+  const currentDateTime = new Date();
+  currentDateTime.setDate(currentDateTime.getDate() + 1);
 
-checkinElem.onchange = function () {
+  const year = currentDateTime.getFullYear();
+  let month = currentDateTime.getMonth() + 1;
+  let date = currentDateTime.getDate();
+
+  if (month < 10) month = '0' + month;
+  if (date < 10) date = '0' + date;
+
+  const dateTomorrow = `${year}-${month}-${date}`;
+
+  checkinElem.setAttribute("min", dateTomorrow);
+
+  checkinElem.addEventListener("change", function () {
     checkoutElem.setAttribute("min", this.value);
+  });
+}
+
+// Login
+function login() {
+  const email = document.querySelector("#email")?.value;
+  const password = document.querySelector("#password")?.value;
+
+  const demoEmail = "demo@hotel.com";
+  const demoPassword = "demo123";
+
+  if (email === demoEmail && password === demoPassword) {
+    localStorage.setItem("isLoggedIn", "true");
+    window.location.href = "home.html";
+  } else {
+    alert("Invalid credentials");
+  }
 }
