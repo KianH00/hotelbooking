@@ -1,0 +1,348 @@
+/* Navigation on Home Page */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 99;
+}
+.navbar-scrolled{
+    background-color: black;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.navbar .btnnnlogout-popup{
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+.navbar .btnnnlogout-popup:hover{
+    background: #fff;
+    color: #162938;
+}
+.no-underline{
+    text-decoration: none;
+    color: transparent;
+}
+.logo:hover{
+    color: white;
+}
+.navbar li{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+.navbar li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+.navbar li:hover::after{
+    transform: scaleX(1);
+}
+/* Navigation on Home Page */
+
+
+/*carousel css*/
+.c-item{
+    height: 550px;
+}
+.c-img{
+    height: 100%;
+    background-position: flex;
+}
+/*carousel css*/
+
+
+
+/*Image Gallery for the Home Page*/
+.gallery{
+    display: inline-block;
+    border: 1px solid ;
+    margin: 5px;
+    width: 400px;
+}
+.gallery:hover{
+    border: 1px solid;
+    transform:scale(1.15);
+
+}
+.gallery img{
+    width: 100%;
+    height: auto;
+    transition: all 0,3;
+}
+/*Image Gallery for the Home Page*/
+
+
+/*ABOUT US*/
+.section_subtitle{
+    padding-top: 70px;
+    margin-bottom: 7px;
+    padding-left: 7px;
+    font-size: 8px;
+    line-height: .10;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    border-left: 4px solid #bfa67a;
+    font-size:  30px;
+}
+/*Cards for booking*/
+.card{
+    transition: all 0,3;
+}
+.card:hover{
+    transform:scale(1.15);
+}
+
+/*Cards for booking*/
+
+/*Modal log in and booking form*/
+
+.modal{
+    backdrop-filter: blur(20px);
+}
+.elem-group {
+    margin: 20px 0;
+}
+  
+div.elem-group.inlined {
+    width: 49%;
+    display: inline-block;
+    margin-left: 1%;
+}
+  
+label {
+    display: block;
+    font-family: 'Nanum Gothic';
+    padding-bottom: 10px;
+    font-size: 1.25em;
+}
+  
+input, select, textarea {
+    border-radius: 2px;
+    border: 2px solid #777;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    width: 100%;
+    padding: 10px;
+}
+  
+div.elem-group.inlined input {
+    width: 95%;
+    display: inline-block;
+}
+  
+textarea {
+    height: 250px;
+}
+  
+hr {
+    border: 1px dotted #ccc;
+  }
+  
+button {
+    height: 50px;
+    background: orange;
+    border: none;
+    color: white;
+    font-size: 1.25em;
+    font-family: 'Nanum Gothic';
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 0 12px;
+}
+  
+button:hover {
+    background: #333;
+}
+
+/*Modal log in and booking form*/
+
+/*Footer of the Website*/
+footer{
+    background-color: #061017;
+    padding: 5px;
+    bottom: 0;
+    width: 100%;
+    
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+   
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 1.5em;
+    color: black;
+    opacity: 0.9;
+}
+/*Effects on the social Icons of the footer*/
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+/*Effects on the social Icons of the footer*/
+.footerNav{
+    margin: 10px;
+}
+.footercontainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: disc;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.9;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+/*Footer of the Website*/
+
+@media only screen and (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+}
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.contact-left-title h2{
+    font-weight: 600;
+    color: whitesmoke;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: rgb(63, 61, 61);
+    border-radius: 50px ;
+}
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.contact-inputs:focus{
+    border: 2px solid red ;
+}
+.contact-inputs::placeholder{
+    color: rgb(131, 127, 127);
+}
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: white;
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #ff994f,rgb(101, 41, 2));
+    cursor: pointer;
+
+}
+.contact-right img{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    float: inline-end;
+}
+.container-img{
+    display: flex;   
+}
